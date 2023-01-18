@@ -1,4 +1,5 @@
 @import url(variables.css);
+
 html,
 body,
 * {
@@ -10,14 +11,37 @@ body,
 
 }
 
-body {
+body {}
+
+.card-container {
+    background-color: blue;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    justify-content: space-evenly;
 
 }
 
+.card-image {
+    width: 30%;
+}
 
-.card
-{
+.card {
+    width: 30%;
+    height: 40rem;
     font-size: 5rem;
     background-color: red;
     margin: 3rem auto;
+}
+
+.col {
+    width: 27%;
+    justify-content: space-evenly;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-evenly;
+    margin: 3% top;
 }
