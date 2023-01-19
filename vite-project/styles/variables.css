@@ -1,3 +1,18 @@
-body{
-    
+
+.hot {
+    --item-body: red;
+    --item-button-border:  black;
+    --header-border: rgb(255, 236, 65);
+    --header-button-shadow:  rgb(85, 0, 0);
+    --item-shadow: rgb(255, 233, 34);
+    --body:  rgb(255, 166, 0);
+}
+
+.cold {
+    --item-body: rgb(17, 0, 255);
+    --item-button-border:  black;
+    --header-border: rgb(70, 255, 246);
+    --header-button-shadow:  rgb(2, 0, 122);
+    --item-shadow: rgb(73, 249, 255);
+    --body:  rgb(109, 170, 248);
 }
