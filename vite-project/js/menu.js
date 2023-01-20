@@ -1,7 +1,7 @@
 const menu = [
   {
     name: "Blue T-shirt",
-    img: "img/kkkkkkkk.jpg",
+    img: "kkkkkkkk.jpg",
     price: 5,
     Kids: true,
     Adult: false,
@@ -12,7 +12,7 @@ const menu = [
   },
   {
     name: "Green T-shirt",
-    img: "img/greent.jpg",
+    img: "greent.jpg",
     price: 8,
     Kids: true,
     Adult: false,
@@ -23,7 +23,7 @@ const menu = [
   },
   {
     name: "Pink Hoodie",
-    img: "img/rttrsrk.jpg",
+    img: "rttrsrk.jpg",
     price: 23,
     Kids: true,
     Adult: false,
@@ -34,7 +34,7 @@ const menu = [
   },
   {
     name: "Red Coat",
-    img: "img/kgfkfg.jpg",
+    img: "kgfkfg.jpg",
     price: 78,
     Kids: false,
     Adult: true,
@@ -45,7 +45,7 @@ const menu = [
   },
   {
     name: "Louie V shirt",
-    img: "img/iupipupiu.jpg",
+    img: "iupipupiu.jpg",
     price: 1062,
     Kids: false,
     Adult: true,
@@ -56,7 +56,7 @@ const menu = [
   },
   {
     name: "Supreme Hoodie",
-    img: "img/jjjjjjjjjjj.jpg",
+    img: "jjjjjjjjjjj.jpg",
     price: 2678,
     Kids: true,
     Adult: true,
@@ -67,7 +67,7 @@ const menu = [
   },
   {
     name: "Bape Hoodie",
-    img: "img/hhhhhhhh.jpg",
+    img: "hhhhhhhh.jpg",
     price: 3099,
     Kids: false,
     Adult: true,
@@ -78,7 +78,7 @@ const menu = [
   },
   {
     name: "Yellow Coat",
-    img: "img/lllllllllllllllllllllll.jpg",
+    img: "lllllllllllllllllllllll.jpg",
     price: 347,
     Kids: false,
     Adult: true,
@@ -89,7 +89,7 @@ const menu = [
   },
   {
     name: "Taxes Shirt",
-    img: "img/66666.jpg",
+    img: "66666.jpg",
     price: 37,
     Kids: false,
     Adult: true,
@@ -100,7 +100,7 @@ const menu = [
   },
   {
     name: "Striped Shirt",
-    img: "img/yyyyyyy.jpg",
+    img: "yyyyyyy.jpg",
     price: 15,
     Kids: true,
     Adult: false,
@@ -111,7 +111,7 @@ const menu = [
   },
   {
     name: "Gucci Coat",
-    img: "img/22222222.jpg",
+    img: "22222222.jpg",
     price: 5629,
     Kids: false,
     Adult: true,
@@ -122,7 +122,7 @@ const menu = [
   },
   {
     name: "Awesome Shirt",
-    img: "img/uuuuuuuuuuu.jpg",
+    img: "uuuuuuuuuuu.jpg",
     price: 22,
     Kids: true,
     Adult: false,
