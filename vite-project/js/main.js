@@ -1,4 +1,6 @@
 import "../styles/style.css";
+import { menu } from "./menu";
+
 document.querySelector(".mainb").addEventListener("click", function () {
   if (document.body.classList.contains("hot")) {
     document.body.classList.add("cold");
@@ -8,117 +10,6 @@ document.querySelector(".mainb").addEventListener("click", function () {
     document.body.classList.remove("cold");
   }
 });
-
-const cards = [
-  {
-    Id: document.querySelector("#card1"),
-    Kids: true,
-    Adult: false,
-    Summer: true,
-    winter: false,
-    Designer: false,
-    All: true,
-  },
-  {
-    Id: document.querySelector("#card2"),
-    Kids: true,
-    Adult: false,
-    Summer: true,
-    winter: false,
-    Designer: false,
-    All: true,
-  },
-  {
-    Id: document.querySelector("#card3"),
-    Kids: true,
-    Adult: true,
-    Summer: true,
-    winter: false,
-    Designer: false,
-    All: true,
-  },
-  {
-    Id: document.querySelector("#card4"),
-    Kids: false,
-    Adult: true,
-    Summer: false,
-    winter: true,
-    Designer: false,
-    All: true,
-  },
-  {
-    Id: document.querySelector("#card5"),
-    Kids: true,
-    Adult: true,
-    Summer: true,
-    winter: false,
-    Designer: true,
-    All: true,
-  },
-  {
-    Id: document.querySelector("#card6"),
-    Kids: true,
-    Adult: true,
-    Summer: true,
-    winter: true,
-    Designer: true,
-    All: true,
-  },
-  {
-    Id: document.querySelector("#card7"),
-    Kids: false,
-    Adult: true,
-    Summer: true,
-    winter: true,
-    Designer: true,
-    All: true,
-  },
-  {
-    Id: document.querySelector("#card8"),
-    Kids: false,
-    Adult: true,
-    Summer: false,
-    winter: true,
-    Designer: false,
-    All: true,
-  },
-  {
-    Id: document.querySelector("#card9"),
-    Kids: false,
-    Adult: true,
-    Summer: true,
-    winter: false,
-    Designer: false,
-    All: true,
-  },
-  {
-    Id: document.querySelector("#card10"),
-    Kids: true,
-    Adult: false,
-    Summer: true,
-    winter: false,
-    Designer: false,
-    All: true,
-  },
-  {
-    Id: document.querySelector("#card11"),
-    Kids: false,
-    Adult: true,
-    Summer: false,
-    winter: true,
-    Designer: true,
-    All: true,
-  },
-  {
-    Id: document.querySelector("#card12"),
-    Kids: true,
-    Adult: false,
-    Summer: true,
-    winter: false,
-    Designer: false,
-    All: true,
-  },
-];
 
 const DOMSelectors = {
   allb: document.querySelector("#all"),
@@ -130,10 +21,106 @@ const DOMSelectors = {
   cardcontainer: document.querySelector(".cardcontainer"),
 };
 
-function kidso() {
-  const k = DOMSelectors.cardcontainer.innerHtml;
-  //   const kids = cards.filter((cards) => cards.Kids.includes(true));
-  DOMSelectors.kidsb.addEventListener("click", function () {
-    remove(k);
+function erase() {
+  DOMSelectors.cardcontainer.innerHTML = "";
+}
+
+function ItemDisplay(menu) {
+  document.querySelector(".cardcontainer").insertAdjacentHTML(
+    "beforeend",
+    `<div class="card">
+      <div class="card-image">
+        <img class="pic" src="${menu.img}" width="220rem" height="240rem">
+      </div>
+      <div class="card-content">
+        <h3>${menu.name}</h3>
+        <p>$${menu.price}</p>
+      </div>
+  </div>`
+  );
+}
+
+function Displaying() {
+  menu.forEach((menu) => {
+    ItemDisplay(menu);
   });
 }
+Displaying();
+
+function displayall() {
+  menu
+    .filter((menu) => menu.All === true)
+    .forEach((menu) => {
+      ItemDisplay(menu);
+    });
+}
+
+function displayDesigner() {
+  menu
+    .filter((menu) => menu.Designer === true)
+    .forEach((menu) => {
+      ItemDisplay(menu);
+    });
+}
+function displaySummer() {
+  menu
+    .filter((menu) => menu.Summer === true)
+    .forEach((menu) => {
+      ItemDisplay(menu);
+    });
+}
+function displayWinter() {
+  menu
+    .filter((menu) => menu.winter === true)
+    .forEach((menu) => {
+      ItemDisplay(menu);
+    });
+}
+function displayKids() {
+  menu
+    .filter((menu) => menu.Kids === true)
+    .forEach((menu) => {
+      ItemDisplay(menu);
+    });
+}
+function displayAdults() {
+  menu
+    .filter((menu) => menu.Adult === true)
+    .forEach((menu) => {
+      ItemDisplay(menu);
+    });
+}
+
+function Designerp() {
+  erase();
+  displayDesigner();
+}
+
+function Allp() {
+  erase();
+  displayall();
+}
+
+function Summerp() {
+  erase();
+  displaySummer();
+}
+function Winterp() {
+  erase();
+  displayWinter();
+}
+function Kidsp() {
+  erase();
+  displayKids();
+}
+function Adultsp() {
+  erase();
+  displayAdults();
+}
+
+DOMSelectors.Designerb.addEventListener("click", Designerp);
+DOMSelectors.allb.addEventListener("click", Allp);
+DOMSelectors.summerb.addEventListener("click", Summerp);
+DOMSelectors.winterb.addEventListener("click", Winterp);
+DOMSelectors.kidsb.addEventListener("click", Kidsp);
+DOMSelectors.adultsb.addEventListener("click", Adultsp);
